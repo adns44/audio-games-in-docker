@@ -1,0 +1,6 @@
+from agameserverwine64
+ADD ./entrypoint.sh /entrypoint.sh
+ADD ./Server /srv
+RUN mkdir /maps; chmod +x /entrypoint.sh
+Workdir /srv
+ENTRYPOINT /entrypoint.sh

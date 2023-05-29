@@ -1,0 +1,12 @@
+version: '3.6'
+
+services:
+  wine32:
+    build:
+      context: .
+    image: agameserverwine32
+    restart: unless-stopped
+    environment:
+      - TZ=Europe/Budapest
+
+

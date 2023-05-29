@@ -1,0 +1,13 @@
+version: "3"
+services:
+  trtr-server:
+    image: trtr-server
+    network_mode: host
+    environment:
+      - TZ=Europe/Budapest
+    #Attach config files and maps.
+    volumes:
+      - ./config.dat:/srv/config.dat
+      - ./maps.list:/srv/maps.list
+      - ./maps:/maps
+    restart: always
